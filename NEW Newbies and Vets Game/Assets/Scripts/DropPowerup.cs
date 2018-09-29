@@ -6,9 +6,11 @@ using UnityEngine;
 public class DropPowerup : MonoBehaviour {
 
 	
-	public GameObject[] powerups;
-	public int enemyHealth = 100;
+	public GameObject[] powerups; //array of powerups to be added in editor
+	public int enemyHealth = 100; // enemy health for testing purposes
 	public float chanceToDropPowerup = 5f; //the percent chance that any given enemy will drop a powerup on death
+	
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +20,8 @@ public class DropPowerup : MonoBehaviour {
 	void Update () {
 
 		
-		
+		//checks for health to fall below zero, then rolls to see if a powerup drops.
+		//if the powerup drops, uses a randomly selected one from the array. Then destorys the enemy
 	if(enemyHealth <= 0){
 
 		int whichPowerUp = Random.Range(0, powerups.Length + 1);
