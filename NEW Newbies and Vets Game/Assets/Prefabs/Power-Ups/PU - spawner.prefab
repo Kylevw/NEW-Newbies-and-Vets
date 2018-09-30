@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4516222477968830}
   - component: {fileID: 114178299335926960}
   - component: {fileID: 61270121464127014}
+  - component: {fileID: 114527047955883664}
   m_Layer: 0
-  m_Name: Empty Powerup
+  m_Name: PU - spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,3 +88,21 @@ MonoBehaviour:
   attackIncrease: 0
   jumpHigher: 0
   jumpIncrease: 0
+  manaIncrease: 0
+  manaUp: 0
+--- !u!114 &114527047955883664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948732963855270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71823d14bdcc8774dbb628062c1c66ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerups:
+  - {fileID: 1116136249819322, guid: 1d911d50c8f86468380f9d9a7d5a5981, type: 2}
+  - {fileID: 1156855865414604, guid: 507df891ab2ee48ddbaf4edd9fd5d7d7, type: 2}
+  spawnTimeMax: 0
+  spawnTimeMin: 0
