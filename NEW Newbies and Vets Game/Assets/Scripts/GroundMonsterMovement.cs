@@ -19,25 +19,39 @@ public class GroundMonsterMovement : PhysicsObject {
         players = GameObject.FindGameObjectsWithTag("Player");
         edgeCheckLeft = Physics2D.Raycast(transform.position +  new Vector3(-spriteWidth/2,-spriteHeight/2,0), Vector2.down,1);
         edgeCheckLeft = Physics2D.Raycast(transform.position +  new Vector3(spriteWidth / 2, -spriteHeight / 2, 0), Vector2.down, 1);
-        if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+        if (players.Length == 2)
+        {
+            if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[0].transform;
+            }
+            else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[1].transform;
+            }
+        }
+        else
         {
             player = players[0].transform;
-        }
-        else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
-        {
-            player = players[1].transform;
         }
 
     }
     protected override void ComputeVelocity()
     {
-        if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+        if (players.Length == 2)
+        {
+            if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[0].transform;
+            }
+            else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[1].transform;
+            }
+        }
+        else
         {
             player = players[0].transform;
-        }
-        else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
-        {
-            player = players[1].transform;
         }
         check = edgeCheckLeft.collider == null;
         if (edgeCheckLeft.collider != null || edgeCheckRight.collider !=null) {
