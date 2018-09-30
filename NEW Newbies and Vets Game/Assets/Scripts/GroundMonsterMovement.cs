@@ -10,6 +10,8 @@ public class GroundMonsterMovement : PhysicsObject {
     public float timeTilChange;
     public float currentTime;
     protected Vector2 move = Vector2.zero;
+
+    private bool activeState = true;
     
     
     public GameObject[] players;
@@ -36,24 +38,26 @@ public class GroundMonsterMovement : PhysicsObject {
     }
     protected override void ComputeVelocity()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
-        if (players.Length == 2)
+        if (activeState == true)
         {
-            if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+            players = GameObject.FindGameObjectsWithTag("Player");
+            if (players.Length == 2)
+            {
+                if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+                {
+                    player = players[0].transform;
+                }
+                else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
+                {
+                    player = players[1].transform;
+                }
+            }
+            else
             {
                 player = players[0].transform;
             }
-            else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
-            {
-                player = players[1].transform;
-            }
-        }
-        else
-        {
-            player = players[0].transform;
-        }
-        
-            if (Mathf.Abs(player.position.x - transform.position.x) <= maxTriggerDistance && Mathf.Abs(player.position.x - transform.position.x) > minTriggerDistance )
+
+            if (Mathf.Abs(player.position.x - transform.position.x) <= maxTriggerDistance && Mathf.Abs(player.position.x - transform.position.x) > minTriggerDistance)
             {
                 if (player.position.x > transform.position.x)
                 {
@@ -84,7 +88,7 @@ public class GroundMonsterMovement : PhysicsObject {
                     currentTime = timeTilChange;
                 }
                 currentTime -= Time.deltaTime;
-                targetVelocity = move * (maxSpeed );
+                targetVelocity = move * (maxSpeed);
             }
 
             else
@@ -92,13 +96,23 @@ public class GroundMonsterMovement : PhysicsObject {
                 move = Vector2.zero;
                 targetVelocity = move * maxSpeed;
             }
-        
-       
 
 
 
 
 
+
+        }
+    }
+
+    public bool GetActiveState()
+    {
+        return activeState;
+    }
+
+    public void SetActiveState(bool state)
+    {
+        activeState = state;
     }
 
     public Vector2 getDirection()
