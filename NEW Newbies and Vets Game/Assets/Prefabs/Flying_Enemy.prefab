@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304888907310186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 79.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4287957190819034}
@@ -133,14 +133,18 @@ MonoBehaviour:
   gravityModifier: 0
   minGroundNormalY: 0.65
   player: {fileID: 0}
+  enemyProjPrefab: {fileID: 0}
   players: []
   move: {x: 0, y: 0}
   maxSpeed: 35
   nextActionTime: 3
   period: 0
   stayAwayDistance: 5
+  bulletDelay: 0
+  bulletTime: 0
   randomDistX: 0
   randomDistY: 0
+  isShooting: 0
 --- !u!114 &114320076166601388
 MonoBehaviour:
   m_ObjectHideFlags: 1
