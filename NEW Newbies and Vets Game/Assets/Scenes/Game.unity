@@ -123,6 +123,8 @@ GameObject:
   - component: {fileID: 72088131}
   - component: {fileID: 72088130}
   - component: {fileID: 72088132}
+  - component: {fileID: 72088134}
+  - component: {fileID: 72088133}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -166,7 +168,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8a7a4b41f86df4fa2b26ffadefa6a6d1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7490196}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -207,6 +209,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &72088133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72088129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9578ab43604449ea4b963c43f668d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  displacement: 0.1
+  pulseColor: {r: 1, g: 1, b: 0.8745098, a: 0.7490196}
+  pulseSpeed: 1
+--- !u!58 &72088134
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72088129}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7
 --- !u!1001 &153971269
 Prefab:
   m_ObjectHideFlags: 0
@@ -426,11 +458,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41a49d99cf58410c9cbdb5ea0db7737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCooldown: 0
+  attackTimer: 0
   attackPosition: {fileID: 0}
   attackRange: 0
   damage: 0
   playerLayer:
-    serializedVersion: 2
     m_Bits: 0
   player: {fileID: 0}
   players: []
