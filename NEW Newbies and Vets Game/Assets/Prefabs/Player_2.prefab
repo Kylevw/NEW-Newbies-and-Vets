@@ -47,6 +47,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1382937613925636
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4239911967294022}
+  - component: {fileID: 114869233055751062}
+  m_Layer: 0
+  m_Name: Projectile_Origin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1717786277073746
 GameObject:
   m_ObjectHideFlags: 1
@@ -71,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4029051078376836}
-  - component: {fileID: 114055929548767996}
+  - component: {fileID: 114082722683763858}
   m_Layer: 0
   m_Name: Reticle_Controller
   m_TagString: Untagged
@@ -90,8 +106,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4300697956018872}
+  - {fileID: 4239911967294022}
   m_Father: {fileID: 4672448401788418}
-  m_RootOrder: 0
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4239911967294022
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382937613925636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4029051078376836}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4300697956018872
 Transform:
@@ -116,8 +146,8 @@ Transform:
   m_LocalPosition: {x: 70.53828, y: 16.513973, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4029051078376836}
   - {fileID: 4787246132104358}
+  - {fileID: 4029051078376836}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,7 +162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4672448401788418}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50399746019279188
 Rigidbody2D:
@@ -179,7 +209,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 16}
   m_EdgeRadius: 0
---- !u!114 &114055929548767996
+--- !u!114 &114082722683763858
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,6 +238,19 @@ MonoBehaviour:
   moveSprite_2: {fileID: 21300002, guid: b0a964bb6ac66401494c9d59a1465ed2, type: 3}
   moveSprite_3: {fileID: 21300004, guid: b0a964bb6ac66401494c9d59a1465ed2, type: 3}
   frameRate: 3
+--- !u!114 &114869233055751062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382937613925636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c76dc9792b19048b2dfea0163390ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1184447671266400, guid: e61c191eb6f300747ab5703c678d78a6, type: 2}
+  speed: 3000
 --- !u!114 &114974100263297998
 MonoBehaviour:
   m_ObjectHideFlags: 1

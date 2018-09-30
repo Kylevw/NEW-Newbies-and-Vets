@@ -30,7 +30,7 @@ public class Skeleton_Attack : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 
         if (enemyHit == true)
         {
@@ -71,7 +71,7 @@ public class Skeleton_Attack : MonoBehaviour {
                     other.GetComponent<Rigidbody2D>().velocity = new Vector2(knockbackDistance, knockbackHeight);
                 }
 
-                GetComponent<GroundMonsterMovement>().SetActiveState(false);
+                movementControl.SetActiveState(false);
 
                 spriteControl = other.GetComponentInChildren<SpriteRenderer>();
                 originalColor = spriteControl.color;

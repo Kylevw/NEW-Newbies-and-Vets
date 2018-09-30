@@ -45,4 +45,9 @@ public class PlayerMovement : PhysicsObject {
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
+
+    public float getID()
+    {
+        return playerID;
+    }
 }
