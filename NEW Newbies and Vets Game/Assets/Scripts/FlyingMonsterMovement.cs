@@ -14,9 +14,12 @@ public class FlyingMonsterMovement : PhysicsObject
     public float randomDistX;
     public float randomDistY;
     private string direction;
+    public bool isShooting;
     // Use this for initialization
     void Start()
     {
+
+        isShooting = false;
         players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 2) {
             if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
@@ -71,8 +74,11 @@ public class FlyingMonsterMovement : PhysicsObject
             player = players[0].transform;
         }
 
-        if (period <= 0.0 )
+        if (period <= 0.0)
         {
+            isShooting = !isShooting;
+            period = nextActionTime;
+            nextActionTime = Random.value * 3 + 2;
             if (Random.value < .5)
             {
                 randomDistX = Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
@@ -81,29 +87,28 @@ public class FlyingMonsterMovement : PhysicsObject
             {
                 randomDistX = -Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
             }
-            if (Random.value < .5)
-            {
-                randomDistY = Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
-            }
-            else
-            {
-                randomDistY = -Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
-            }
-            period = nextActionTime;
-            nextActionTime = Random.value * 4 + 2;
+            randomDistY = Random.value * stayAwayDistance;
         }
-        Vector3 nearPlayer = player.position + new Vector3(randomDistX, randomDistY, 0);
-        if(nearPlayer.x > transform.position.x)
-        {
-            direction = "left";
-        }
-        else if(nearPlayer.x < transform.position.x)
-        {
-            direction = "right";
-        }
-        transform.position = Vector3.MoveTowards(transform.position, nearPlayer, maxSpeed * Time.deltaTime);
-        period -= Time.deltaTime;
 
+        if (!isShooting)
+        {
+            Vector3 nearPlayer = player.position + new Vector3(randomDistX, randomDistY, 0);
+            transform.position = Vector3.MoveTowards(transform.position, nearPlayer, maxSpeed * Time.deltaTime);
+            period -= Time.deltaTime;
+            if (nearPlayer.x > transform.position.x)
+            {
+                direction = "left";
+            }
+            else if (nearPlayer.x < transform.position.x)
+            {
+                direction = "right";
+            }
+        }
+        else
+        {
+
+            period -= Time.deltaTime;
+        }
 
     }
     public void TakeDamage(int damage) { 
