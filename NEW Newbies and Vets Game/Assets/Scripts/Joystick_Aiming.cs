@@ -6,6 +6,7 @@ public class Joystick_Aiming : MonoBehaviour {
 
     public float playerID;
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -25,7 +26,9 @@ public class Joystick_Aiming : MonoBehaviour {
         if (inputX != 0 && inputY != 0)
         {
             transform.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(inputY, inputX) * (180 / Mathf.PI));
+
         }
+
     }
 
 }

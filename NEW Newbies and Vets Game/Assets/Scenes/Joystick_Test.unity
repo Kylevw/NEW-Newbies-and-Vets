@@ -196,7 +196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4457290047979712, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 23.027449
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 4457290047979712, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -226,29 +226,6 @@ Prefab:
       propertyPath: m_Name
       value: Player_1 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 212587407987561140, guid: 5392af775a41c47a5bb2742d5419606a,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212587407987561140, guid: 5392af775a41c47a5bb2742d5419606a,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212587407987561140, guid: 5392af775a41c47a5bb2742d5419606a,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4057589963214954, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521108797987158, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
   m_IsPrefabAsset: 0
@@ -265,7 +242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378805283695750, guid: 351a630aeabd5774c9dc94091edfffe4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -54.1
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 4378805283695750, guid: 351a630aeabd5774c9dc94091edfffe4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -522,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
-  knockbackDistance: 50
+  knockbackDistance: 60
   knockbackHeight: 40
   hitTime: 15
 --- !u!1 &1203108096
@@ -625,11 +602,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4672448401788418, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 70.53828
+      value: 87.6
       objectReference: {fileID: 0}
     - target: {fileID: 4672448401788418, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.513973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4672448401788418, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}
       propertyPath: m_LocalPosition.z
@@ -658,14 +635,6 @@ Prefab:
     - target: {fileID: 1356570690087576, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}
       propertyPath: m_Name
       value: Player_2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4787246132104358, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4029051078376836, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb28ee28e1e4c48c2aa8700eb3a33554, type: 2}

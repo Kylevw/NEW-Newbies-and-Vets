@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
   - Stat Holder
   - Tombstone
+=======
+  - Projectile
+>>>>>>> e69f503d975e7feb0da52fe0f6792ebdd470f2e1
   layers:
   - Default
   - TransparentFX
