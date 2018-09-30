@@ -21,7 +21,15 @@ public class PlayerProperties : MonoBehaviour {
     public int jumpHeight;
     public float resTime;
     public int mana;
-    
-    
+
+	public HealthBar healthBar;
+
+	private void Start()
+	{
+		HealthSystem healthSystem = new HealthSystem(100);
+
+		healthBar.Setup(healthSystem);
+	}
+
 
 }
