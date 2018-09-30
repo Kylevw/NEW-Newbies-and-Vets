@@ -22,7 +22,7 @@ public class FlyingMonsterMovement : PhysicsObject
     void Start()
     {
 
-        isShooting = false;
+        isShooting = true;
         players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 2) {
             if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
@@ -109,15 +109,15 @@ public class FlyingMonsterMovement : PhysicsObject
         }
         else
         {
-            if (bulletTime <= 0.0f)
+            /*if (bulletTime <= 0.0f)
             {
                 Instantiate(enemyProjPrefab, transform.position, Quaternion.identity);
-                bulletDelay = bulletTime;
+                bulletTime = bulletDelay;
+                bulletDelay = Random.value*.5+.5;
             }
-            else
-            {
+            
                 bulletTime -= Time.deltaTime;
-            }
+            */
             period -= Time.deltaTime;
         }
 
