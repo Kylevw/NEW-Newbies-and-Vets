@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GroundMonsterMovement : PhysicsObject {
     public Transform player;
+    public float minTriggerDistance;
+    public float maxTriggerDistance;
     public float maxSpeed = 2;
     public float timeTilChange;
     public float currentTime;
@@ -51,7 +53,7 @@ public class GroundMonsterMovement : PhysicsObject {
             player = players[0].transform;
         }
         
-            if (Mathf.Abs(player.position.x - transform.position.x) <= 5 && Mathf.Abs(player.position.x - transform.position.x) > .8 )
+            if (Mathf.Abs(player.position.x - transform.position.x) <= maxTriggerDistance && Mathf.Abs(player.position.x - transform.position.x) > minTriggerDistance )
             {
                 if (player.position.x > transform.position.x)
                 {
@@ -63,7 +65,7 @@ public class GroundMonsterMovement : PhysicsObject {
                 }
                 targetVelocity = move * maxSpeed;
             }
-            else if (Mathf.Abs(player.position.x - transform.position.x) > 5)
+            else if (Mathf.Abs(player.position.x - transform.position.x) > maxTriggerDistance)
             {
                 if (currentTime <= 0.0f)
                 {
