@@ -16,18 +16,25 @@ public class FlyingMonsterMovement : PhysicsObject
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
-        if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+        if (players.Length == 2) {
+            if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[0].transform;
+            }
+            else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[1].transform;
+            }
+        }
+        else
         {
             player = players[0].transform;
-        }
-        else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
-        {
-            player = players[1].transform;
         }
         if (Random.value < .5)
         {
             randomDistX = Mathf.Max(Random.value * 2, 1);
         }
+        
         else
         {
             randomDistX = -Mathf.Max(Random.value * 2, 1);
@@ -45,13 +52,21 @@ public class FlyingMonsterMovement : PhysicsObject
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+        players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length == 2)
+        {
+            if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[0].transform;
+            }
+            else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[1].transform;
+            }
+        }
+        else
         {
             player = players[0].transform;
-        }
-        else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
-        {
-            player = players[1].transform;
         }
 
         if (period <= 0.0 || Vector3.Distance(player.position, transform.position) > 5)
