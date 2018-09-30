@@ -15,10 +15,7 @@ public class PowerUp : MonoBehaviour {
    
 
 
-    private void Awake()
-    {
-       
-    }
+    //the variables that control what kind of powerup it is and what it does
 
     public bool healthIncrease;
     public int healthIncreaseAmt;
@@ -35,8 +32,11 @@ public class PowerUp : MonoBehaviour {
     public bool jumpHigher;
     public int jumpIncrease;
 
+    public bool manaIncrease;
+    public int manaUp;
 
 
+    //on trigger with player, do the powerup thing then dissapear
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -68,6 +68,11 @@ public class PowerUp : MonoBehaviour {
         if (jumpHigher)
         {
             playerProperties.jumpHeight += jumpIncrease;
+        }
+
+        if (manaIncrease)
+        {
+            playerProperties.mana += manaUp;
         }
 
         Destroy(gameObject);

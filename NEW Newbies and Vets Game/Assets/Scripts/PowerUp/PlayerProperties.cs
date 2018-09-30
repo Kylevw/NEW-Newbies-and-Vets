@@ -12,12 +12,15 @@ public class PlayerProperties : MonoBehaviour {
      * these values will be modified by powerups via the powerUp script
      */
 
+
+
+        //the player variable stats
     public int health;
     public int moveSpeed;
     public int attack;
     public int jumpHeight;
     public float resTime;
-
+    public int mana;
     
     
 
