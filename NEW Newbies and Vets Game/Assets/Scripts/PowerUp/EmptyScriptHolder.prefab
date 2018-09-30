@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4297664805863096}
   - component: {fileID: 114977980821493636}
   m_Layer: 0
-  m_Name: StatHolder
+  m_Name: EmptyScriptHolder
   m_TagString: Stat Holder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
