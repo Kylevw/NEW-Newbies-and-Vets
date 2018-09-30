@@ -127,7 +127,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946041195907268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 70.53828, y: 16.513973, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -135,7 +135,7 @@ Transform:
   - {fileID: 4160980388586778}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!50 &50353686433293442
 Rigidbody2D:
   serializedVersion: 4
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172d42bc1fd498742a4580479f0822ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityModifier: 15
+  gravityModifier: -15
   minGroundNormalY: 0.65
   maxSpeed: 45
   jumpTakeOffSpeed: 80
