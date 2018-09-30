@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1768228438178756}
+  m_RootGameObject: {fileID: 1058407438349180}
   m_IsPrefabAsset: 1
---- !u!1 &1768228438178756
+--- !u!1 &1058407438349180
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4895523753761180}
-  - component: {fileID: 212398163059420032}
-  - component: {fileID: 95050553863673730}
+  - component: {fileID: 4307836743830390}
+  - component: {fileID: 212198004833495640}
+  - component: {fileID: 95414298733348422}
   m_Layer: 0
   m_Name: Water Bat
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4895523753761180
+--- !u!4 &4307836743830390
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1768228438178756}
+  m_GameObject: {fileID: 1058407438349180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,16 +41,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95050553863673730
+--- !u!95 &95414298733348422
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1768228438178756}
+  m_GameObject: {fileID: 1058407438349180}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 58f0076c9a5e5455291729dbbe805532, type: 2}
+  m_Controller: {fileID: 9100000, guid: de102ccb24ef540678501494e62ad68a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -59,12 +59,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!212 &212398163059420032
+--- !u!212 &212198004833495640
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1768228438178756}
+  m_GameObject: {fileID: 1058407438349180}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
