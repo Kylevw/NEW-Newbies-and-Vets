@@ -40,8 +40,13 @@ GameObject:
   - component: {fileID: 50399746019279188}
   - component: {fileID: 61542110848604898}
   - component: {fileID: 114974100263297998}
+<<<<<<< HEAD
+  - component: {fileID: 114309706194985300}
+  - component: {fileID: 114977710497641850}
+=======
   - component: {fileID: 114830118526118454}
   - component: {fileID: 114048741270725650}
+>>>>>>> c9dc4d7d710ea153a4506a5ba5e593d2d0f997e6
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Player
@@ -115,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356570690087576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.53828, y: 16.513973, z: 0}
+  m_LocalPosition: {x: 40, y: 26.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4029051078376836}
@@ -209,7 +214,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 2
+<<<<<<< HEAD
+--- !u!114 &114309706194985300
+=======
 --- !u!114 &114830118526118454
+>>>>>>> c9dc4d7d710ea153a4506a5ba5e593d2d0f997e6
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,9 +229,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadad65f9c9eca145a28524a7c598968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  tombstone: {fileID: 1060777184360700, guid: e9b3bf16e7a180d4a963f9f6f33c53a0, type: 2}
+  ghost: {fileID: 1634234073463030, guid: 8d0f696f9770b354dba4ad915032b1b5, type: 2}
+=======
   tombstone: {fileID: 1997155498694894, guid: c38a3da4da5ccbb449fedcb448ef2308, type: 2}
   ghost: {fileID: 1946041195907268, guid: 09c579b87ebeead4185925b7236acd02, type: 2}
   health: 0
+>>>>>>> c9dc4d7d710ea153a4506a5ba5e593d2d0f997e6
 --- !u!114 &114835611813840940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,6 +283,22 @@ MonoBehaviour:
   maxSpeed: 45
   jumpTakeOffSpeed: 80
   playerID: 2
+--- !u!114 &114977710497641850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356570690087576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3446c85da087345bde5554183b202e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1373828015909930, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
+  ghost: {fileID: 1531308227023608, guid: b4294ba2f42786d4da8dbe7123f08f6d, type: 2}
+  ghostStartPos: {x: 0, y: 0}
+  maxResTime: 15
+  minResTime: 1
 --- !u!212 &212649078718500088
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -303,7 +333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300006, guid: b0a964bb6ac66401494c9d59a1465ed2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -349,7 +379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 29b737001ff76ea4d8c75cf56d6a456d, type: 3}
   m_Color: {r: 0.9921569, g: 0.6509804, b: 0.3019608, a: 1}
   m_FlipX: 0
