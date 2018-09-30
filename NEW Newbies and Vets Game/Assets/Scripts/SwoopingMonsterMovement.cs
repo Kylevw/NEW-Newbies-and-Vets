@@ -62,7 +62,7 @@ public class SwoopingMonsterMovement : PhysicsObject {
         {
             isSwooping = false;
         }
-        else if (Vector2.Distance(transform.position, player.position) > flyDistance;)
+        else if (Vector2.Distance(transform.position, player.position) > flyDistance)
         {
             isSwooping = true;
         }
