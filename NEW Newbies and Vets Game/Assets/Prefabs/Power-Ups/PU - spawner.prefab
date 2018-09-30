@@ -103,6 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerups:
   - {fileID: 1116136249819322, guid: 1d911d50c8f86468380f9d9a7d5a5981, type: 2}
+  - {fileID: 1118064123594446, guid: cf8671b62abd4b649801fc28a6c11d25, type: 2}
+  - {fileID: 1041547282966686, guid: 011a476557be8ee44ab6f83d0d6d9820, type: 2}
   - {fileID: 1156855865414604, guid: 507df891ab2ee48ddbaf4edd9fd5d7d7, type: 2}
+  - {fileID: 1258349089111008, guid: c1fe7c13dabc0944f988736400171656, type: 2}
   spawnTimeMax: 0
   spawnTimeMin: 0
