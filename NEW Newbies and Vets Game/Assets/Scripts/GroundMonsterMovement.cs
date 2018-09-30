@@ -38,6 +38,7 @@ public class GroundMonsterMovement : PhysicsObject {
     }
     protected override void ComputeVelocity()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 2)
         {
             if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))

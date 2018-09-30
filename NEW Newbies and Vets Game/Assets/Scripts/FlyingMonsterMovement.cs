@@ -52,6 +52,7 @@ public class FlyingMonsterMovement : PhysicsObject
 
     void FixedUpdate()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 2)
         {
             if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
