@@ -5,8 +5,8 @@ using UnityEngine;
 public class GroundMonsterMovement : PhysicsObject {
     public Transform player;
     public float maxSpeed = 2;
-    public float timeTilChange = 60;
-    public float currentTime = 0;
+    public float timeTilChange;
+    public float currentTime;
     protected Vector2 move = Vector2.zero;
     public float spriteWidth = .16f;
     public float spriteHeight = .16f;
@@ -15,6 +15,7 @@ public class GroundMonsterMovement : PhysicsObject {
     public RaycastHit2D edgeCheckRight;
     public GameObject[] players;
     void Start () {
+        currentTime = timeTilChange;
         players = GameObject.FindGameObjectsWithTag("Player");
         edgeCheckLeft = Physics2D.Raycast(transform.position +  new Vector3(-spriteWidth/2,-spriteHeight/2,0), Vector2.down,1);
         edgeCheckLeft = Physics2D.Raycast(transform.position +  new Vector3(spriteWidth / 2, -spriteHeight / 2, 0), Vector2.down, 1);
@@ -54,7 +55,7 @@ public class GroundMonsterMovement : PhysicsObject {
             }
             else if (Mathf.Abs(player.position.x - transform.position.x) > 5)
             {
-                if (currentTime > timeTilChange)
+                if (currentTime <= 0.0f)
                 {
                     if (Random.value < .333)
                     {
@@ -68,9 +69,9 @@ public class GroundMonsterMovement : PhysicsObject {
                     {
                         move = Vector2.zero;
                     }
-                    currentTime = 0;
+                    currentTime = timeTilChange;
                 }
-                currentTime += 1;
+                currentTime -= Time.deltaTime;
                 targetVelocity = move * (maxSpeed );
             }
 

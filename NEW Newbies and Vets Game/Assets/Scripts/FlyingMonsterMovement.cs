@@ -54,7 +54,7 @@ public class FlyingMonsterMovement : PhysicsObject
             player = players[1].transform;
         }
 
-        if (period > nextActionTime || Vector3.Distance(player.position, transform.position) > 5)
+        if (period <= 0.0 || Vector3.Distance(player.position, transform.position) > 5)
         {
             if (Random.value < .5)
             {
@@ -72,11 +72,11 @@ public class FlyingMonsterMovement : PhysicsObject
             {
                 randomDistY = -Mathf.Max(Random.value * 2, 1);
             }
-            period = 0.0f;
+            period = nextActionTime;
         }
         Vector3 nearPlayer = player.position + new Vector3(randomDistX, randomDistY, 0);
         transform.position = Vector3.MoveTowards(transform.position, nearPlayer, maxSpeed * Time.deltaTime);
-        period += .1f;
+        period -= Time.deltaTime;
 
 
     }
