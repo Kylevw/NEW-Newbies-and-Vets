@@ -10,6 +10,7 @@ public class FlyingMonsterMovement : PhysicsObject
     public float maxSpeed = 2;
     public float nextActionTime;
     public float period;
+    public float stayAwayDistance;
     public float randomDistX;
     public float randomDistY;
     // Use this for initialization
@@ -32,20 +33,20 @@ public class FlyingMonsterMovement : PhysicsObject
         }
         if (Random.value < .5)
         {
-            randomDistX = Mathf.Max(Random.value * 2, 1);
+            randomDistX = Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance/2);
         }
         
         else
         {
-            randomDistX = -Mathf.Max(Random.value * 2, 1);
+            randomDistX = -Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
         }
         if (Random.value < .5)
         {
-            randomDistY = Mathf.Max(Random.value * 2, 1);
+            randomDistY = Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
         }
         else
         {
-            randomDistY = -Mathf.Max(Random.value * 2, 1);
+            randomDistY = -Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
         }
         gravityModifier = 0;
     }
@@ -73,19 +74,19 @@ public class FlyingMonsterMovement : PhysicsObject
         {
             if (Random.value < .5)
             {
-                randomDistX = Mathf.Max(Random.value * 2, 1);
+                randomDistX = Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
             }
             else
             {
-                randomDistX = -Mathf.Max(Random.value * 2, 1);
+                randomDistX = -Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
             }
             if (Random.value < .5)
             {
-                randomDistY = Mathf.Max(Random.value * 2, 1);
+                randomDistY = Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
             }
             else
             {
-                randomDistY = -Mathf.Max(Random.value * 2, 1);
+                randomDistY = -Mathf.Max(Random.value * stayAwayDistance, stayAwayDistance / 2);
             }
             period = nextActionTime;
         }
