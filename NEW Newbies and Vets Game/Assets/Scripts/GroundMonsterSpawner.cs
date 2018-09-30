@@ -13,7 +13,6 @@ public class GroundMonsterSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        timeTilSpawn = 0.0f;
 
     }
 
