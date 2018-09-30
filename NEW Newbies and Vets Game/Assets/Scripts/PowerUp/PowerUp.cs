@@ -69,8 +69,10 @@ public class PowerUp : MonoBehaviour {
         {
             playerProperties.jumpHeight += jumpIncrease;
         }
+
+        Destroy(gameObject);
     }
 
 
-
+   
 }
