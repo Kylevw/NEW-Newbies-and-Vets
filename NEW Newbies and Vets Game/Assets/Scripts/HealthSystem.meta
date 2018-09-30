@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:NEW Newbies and Vets Game/Assets/Scripts/HealthSystem.meta
 guid: 14f1c2926d3944a6e8e5ea643b87b992
+=======
+guid: ba3389cc81a30dc4f8388fd50e92ee26
+>>>>>>> 512e38ebd3d38edbbd3105765a658ca9dbe2f9e5:NEW Newbies and Vets Game/Assets/Scripts/health system.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

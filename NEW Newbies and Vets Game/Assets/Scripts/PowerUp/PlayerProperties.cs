@@ -29,7 +29,6 @@ public class PlayerProperties : MonoBehaviour {
 		HealthSystem healthSystem = new HealthSystem(100);
 
 		healthBar.Setup(healthSystem);
-		healthSystem.Damage(50);
 	}
 
 
