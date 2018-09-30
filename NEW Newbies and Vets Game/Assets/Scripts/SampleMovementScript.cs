@@ -11,9 +11,9 @@ public class SampleMovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        currentMovement.x += (Random.value - 0.5f) * (rotationSpeed);
-        currentMovement.y += (Random.value - 0.5f) * (rotationSpeed);
-        currentMovement = currentMovement.normalized * speed;
+        currentMovement.x = currentMovement.normalized.x + ((Random.value - 0.5f) * (rotationSpeed));
+        currentMovement.y = currentMovement.normalized.y + ((Random.value - 0.5f) * (rotationSpeed));
+        currentMovement *= speed;
 
         transform.position += currentMovement * Time.deltaTime;
 	}
