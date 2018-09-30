@@ -101,5 +101,10 @@ public class GroundMonsterMovement : PhysicsObject {
 
     }
 
+    public Vector2 getDirection()
+    {
+        return move;
+    }
+
 
 }
