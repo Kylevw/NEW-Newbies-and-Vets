@@ -5,12 +5,15 @@ using UnityEngine;
 public class FlyingMonsterMovement : PhysicsObject
 {
     public Transform player;
+    public GameObject enemyProjPrefab;
     public GameObject[] players;
     public Vector2 move = Vector2.zero;
     public float maxSpeed = 2;
     public float nextActionTime;
     public float period;
     public float stayAwayDistance;
+    public float bulletDelay;
+    public float bulletTime;
     public float randomDistX;
     public float randomDistY;
     private string direction;
@@ -106,7 +109,15 @@ public class FlyingMonsterMovement : PhysicsObject
         }
         else
         {
-
+            if (bulletTime <= 0.0f)
+            {
+                Instantiate(enemyProjPrefab, transform.position, Quaternion.identity);
+                bulletDelay = bulletTime;
+            }
+            else
+            {
+                bulletTime -= Time.deltaTime;
+            }
             period -= Time.deltaTime;
         }
 
