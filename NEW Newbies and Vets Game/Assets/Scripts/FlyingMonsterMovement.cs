@@ -8,8 +8,8 @@ public class FlyingMonsterMovement : PhysicsObject
     public GameObject[] players;
     public Vector2 move = Vector2.zero;
     public float maxSpeed = 2;
-    private float nextActionTime = 20.0f;
-    public float period = 20.1f;
+    public float nextActionTime;
+    public float period;
     public float randomDistX;
     public float randomDistY;
     // Use this for initialization
