@@ -16,6 +16,7 @@ public class PlayerMovement : PhysicsObject {
     {
         Vector2 move = Vector2.zero;
         move.x = Input.GetAxis("P"+PlayerID+"_Move");
+
         if(Input.GetButtonDown("P"+PlayerID+"_Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
