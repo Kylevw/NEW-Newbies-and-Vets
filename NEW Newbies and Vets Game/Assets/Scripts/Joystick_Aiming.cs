@@ -22,7 +22,10 @@ public class Joystick_Aiming : MonoBehaviour {
             Vector2 aimDirection = new Vector2(inputX, inputY);
         }
 
-        transform.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(inputY, inputX) * (180 / Mathf.PI));
+        if (inputX != 0 && inputY != 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(inputY, inputX) * (180 / Mathf.PI));
+        }
     }
 
 }
