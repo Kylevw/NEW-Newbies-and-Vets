@@ -13,6 +13,7 @@ public class FlyingMonsterMovement : PhysicsObject
     public float stayAwayDistance;
     public float randomDistX;
     public float randomDistY;
+    private string direction;
     // Use this for initialization
     void Start()
     {
@@ -92,6 +93,14 @@ public class FlyingMonsterMovement : PhysicsObject
             nextActionTime = Random.value * 4 + 2;
         }
         Vector3 nearPlayer = player.position + new Vector3(randomDistX, randomDistY, 0);
+        if(nearPlayer.x > transform.position.x)
+        {
+            direction = "left";
+        }
+        else if(nearPlayer.x < transform.position.x)
+        {
+            direction = "right";
+        }
         transform.position = Vector3.MoveTowards(transform.position, nearPlayer, maxSpeed * Time.deltaTime);
         period -= Time.deltaTime;
 
@@ -99,6 +108,11 @@ public class FlyingMonsterMovement : PhysicsObject
     }
     public void TakeDamage(int damage) { 
     
+    }
+
+    public string getDirection()
+    {
+        return direction;
     }
 }
 

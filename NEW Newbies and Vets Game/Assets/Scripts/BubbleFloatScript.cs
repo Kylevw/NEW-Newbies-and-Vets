@@ -36,7 +36,6 @@ public class BubbleFloatScript : MonoBehaviour {
         aliveTime += Time.deltaTime;
 
         sprite.color = Color.Lerp(defaultColor, pulseColor, Mathf.PingPong(pulseTime, 1));
-        Debug.Log(Mathf.PingPong(pulseTime, 1));
         pulseTime += Time.deltaTime * pulseSpeed;
 
         if (aliveTime >= timeToDespawn) {
