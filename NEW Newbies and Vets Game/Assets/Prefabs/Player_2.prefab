@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 50399746019279188}
   - component: {fileID: 61542110848604898}
   - component: {fileID: 114974100263297998}
+  - component: {fileID: 114830118526118454}
+  - component: {fileID: 114048741270725650}
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Player
@@ -179,6 +181,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 16}
   m_EdgeRadius: 0
+--- !u!114 &114048741270725650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356570690087576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3446c85da087345bde5554183b202e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1373828015909930, guid: 5392af775a41c47a5bb2742d5419606a, type: 2}
+  ghost: {fileID: 1876211505441248, guid: 7c0fc22b35bb0e84aa08584dc915a2b4, type: 2}
+  ghostStartPos: {x: 0, y: 0}
+  maxResTime: 15
+  minResTime: 1
 --- !u!114 &114055929548767996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,6 +209,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerID: 2
+--- !u!114 &114830118526118454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356570690087576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cadad65f9c9eca145a28524a7c598968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tombstone: {fileID: 1997155498694894, guid: c38a3da4da5ccbb449fedcb448ef2308, type: 2}
+  ghost: {fileID: 1946041195907268, guid: 09c579b87ebeead4185925b7236acd02, type: 2}
+  health: 0
 --- !u!114 &114835611813840940
 MonoBehaviour:
   m_ObjectHideFlags: 1
