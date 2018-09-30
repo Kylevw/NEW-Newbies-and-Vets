@@ -5,6 +5,7 @@ TextureImporter:
     21300000: wizard_blue_walk_0
     21300002: wizard_blue_walk_1
     21300004: wizard_blue_walk_2
+    21300006: wizard_yellow_stand
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -164,6 +165,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 178f423748d4a4d1fa61fddb370f1d93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_yellow_stand
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0fce537f4aa41ea989dd0971016d50
       vertices: []
       indices: 
       edges: []
