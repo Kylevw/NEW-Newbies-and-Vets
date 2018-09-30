@@ -74,8 +74,8 @@ public class SwoopingMonsterMovement : PhysicsObject {
         }
         else
         {
-            float rand = flyDistance * Random.value;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(rand + 5, flyDistance - rand + 5, 0), maxSpeed * Time.deltaTime);
+            float rand = flyDistance * Random.value+5;
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(rand, flyDistance + 5 - rand  , 0), maxSpeed * Time.deltaTime);
         }    
 
             if (player.position.x > transform.position.x)
