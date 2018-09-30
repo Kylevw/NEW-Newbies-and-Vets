@@ -7,18 +7,21 @@ public class SwoopingMonsterMovement : PhysicsObject {
     public Transform player;
     public GameObject[] players;
     public Vector2 move = Vector2.zero;
+    public Vector3 farFromHere;
     public float maxSpeed;
-    public float nextActionTime;
-    public float period;
     public float flyDistance;
     public bool isSwooping;
+    public float randX;
+    public float randY;
     private string direction;
 
     // Use this for initialization
     void Start()
     {
+        isSwooping = true;
+        randX = flyDistance * Random.value + 5;
+        randY = flyDistance * Random.value;
 
-        
         players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 2)
         {
@@ -60,6 +63,16 @@ public class SwoopingMonsterMovement : PhysicsObject {
 
         if (Vector2.Distance(transform.position, player.position) < 3)
         {
+            randX = flyDistance * Random.value + flyDistance;
+            randY = flyDistance * Random.value + flyDistance;
+            if (Random.value < .5)
+            {
+                farFromHere = transform.position + new Vector3(randX, randY, 0);
+            }
+            else
+            {
+                farFromHere = transform.position + new Vector3(-randX, randY, 0);
+            }
             isSwooping = false;
         }
         else if (Vector2.Distance(transform.position, player.position) > flyDistance)
@@ -74,8 +87,10 @@ public class SwoopingMonsterMovement : PhysicsObject {
         }
         else
         {
-            float rand = flyDistance * Random.value+5;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(rand, flyDistance + 5 - rand  , 0), maxSpeed * Time.deltaTime);
+            
+
+           
+            transform.position = Vector3.MoveTowards(transform.position, farFromHere , maxSpeed * Time.deltaTime);
         }    
 
             if (player.position.x > transform.position.x)
