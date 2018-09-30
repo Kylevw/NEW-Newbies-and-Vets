@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 748066486}
   - component: {fileID: 748066485}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,6 +830,7 @@ MonoBehaviour:
   moveSprite_1: {fileID: 21300000, guid: afe4dbe29df2241539a4d2248f6fde16, type: 3}
   moveSprite_2: {fileID: 21300002, guid: afe4dbe29df2241539a4d2248f6fde16, type: 3}
   moveSprite_3: {fileID: 21300004, guid: afe4dbe29df2241539a4d2248f6fde16, type: 3}
+  frameRate: 3
 --- !u!1 &1776579017
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +877,7 @@ MonoBehaviour:
   moveSprite_1: {fileID: 21300000, guid: b0a964bb6ac66401494c9d59a1465ed2, type: 3}
   moveSprite_2: {fileID: 21300002, guid: b0a964bb6ac66401494c9d59a1465ed2, type: 3}
   moveSprite_3: {fileID: 21300004, guid: b0a964bb6ac66401494c9d59a1465ed2, type: 3}
+  frameRate: 3
 --- !u!212 &1776579020
 SpriteRenderer:
   m_ObjectHideFlags: 0

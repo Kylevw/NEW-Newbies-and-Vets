@@ -16,6 +16,8 @@ public class Sprite_DIR_Switch : MonoBehaviour {
 
     private int updateCount = 1;
 
+    public int frameRate;
+
 	// Use this for initialization
 	void Start () {
 
@@ -25,20 +27,24 @@ public class Sprite_DIR_Switch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(updateCount == 1)
+        if(updateCount == frameRate)
         {
             spriteRenderer.sprite = moveSprite_1;
             updateCount++;
         }
-        else if(updateCount == 2)
+        else if(updateCount == frameRate * 2)
         {
             spriteRenderer.sprite = moveSprite_2;
             updateCount++;
         }
-        else if(updateCount == 3)
+        else if(updateCount == frameRate * 3)
         {
             spriteRenderer.sprite = moveSprite_3;
             updateCount = 1;
+        }
+        else
+        {
+            updateCount++;
         }
 
         if (Input.GetAxis("P" + playerID + "_Move") < 0)
