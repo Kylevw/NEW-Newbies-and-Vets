@@ -9,19 +9,23 @@ public class EnemyProjectile : MonoBehaviour {
     private Transform player;
     private Vector2 target;
 
-    Transform closerPlayer;
+    public GameObject[] players;
 
     // Use this for initialization
     void Start () {
-        
+
         //Check which player is closer
-        if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player1").transform.position) <= Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player2").transform.position))
+        players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length == 2)
         {
-            closerPlayer = GameObject.FindGameObjectWithTag("Player1").transform;
-        }
-        else if (Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player1").transform.position ) > Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player2").transform.position))
-        {
-            closerPlayer = GameObject.FindGameObjectWithTag("Player2").transform;
+            if (Vector2.Distance(transform.position, players[0].transform.position) <= Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[0].transform;
+            }
+            else if (Vector2.Distance(transform.position, players[0].transform.position) > Vector2.Distance(transform.position, players[1].transform.position))
+            {
+                player = players[1].transform;
+            }
         }
         //else if(Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player1").transform.position) == Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player2").transform.position))
         //{
@@ -29,7 +33,7 @@ public class EnemyProjectile : MonoBehaviour {
         //}
 
         //Set target location
-        target = new Vector2(closerPlayer.position.x, closerPlayer.position.y);
+        target = new Vector2(player.position.x, player.position.y);
     }
     
     // Update is called once per frame
