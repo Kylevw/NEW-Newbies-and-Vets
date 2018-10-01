@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1413022996414832}
+  m_IsPrefabAsset: 1
+--- !u!1 &1413022996414832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4877441603197636}
+  - component: {fileID: 114896469213060592}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4877441603197636
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413022996414832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4599123, y: 0.6327452, z: 7.727481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114896469213060592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413022996414832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35bab69c9047c9f42b24a8dc811ca46a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Background
+    clip: {fileID: 8300000, guid: dd669ccf45253fa408a0b22acbc04462, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 1
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 2b8eba41c7d50414795e6afc2de93628, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+  - name: Fireball
+    clip: {fileID: 8300000, guid: 2a9dfb2501e6f954b88904172acd9d3b, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDamaged
+    clip: {fileID: 8300000, guid: 35ccdebd54a118a468f4f1d4f52db465, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 6136c5adff6f61246a4962736703cfdc, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerRevive
+    clip: {fileID: 8300000, guid: 46acf5d199d6279459c5aef2ddd48833, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerupGet
+    clip: {fileID: 8300000, guid: 247b293fc58f98247954e7d194fa7779, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerupSpawn
+    clip: {fileID: 8300000, guid: dd669ccf45253fa408a0b22acbc04462, type: 3}
+    volume: 0.49
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
